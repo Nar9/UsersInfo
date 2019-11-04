@@ -1,0 +1,13 @@
+  platform :ios, '11.0'
+
+target 'UsersInfo' do
+
+  use_frameworks!
+
+  # Pods for UsersInfo
+
+    pod 'Alamofire'
+    pod 'Kingfisher'
+    pod 'MBProgressHUD'
+
+end

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedUser" representedClassName=".SavedUser" syncable="YES">
+        <attribute name="avatarUrl" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <relationship name="usersList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedUsersList" inverseName="usersData" inverseEntity="SavedUsersList"/>
+    </entity>
+    <entity name="SavedUsersList" representedClassName=".SavedUsersList" syncable="YES">
+        <attribute name="page" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="perPage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalPages" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalUsers" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="usersData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedUser" inverseName="usersList" inverseEntity="SavedUser"/>
+    </entity>
+    <elements>
+        <element name="SavedUser" positionX="126.94140625" positionY="12.54296875" width="128" height="133"/>
+        <element name="SavedUsersList" positionX="-54" positionY="27" width="128" height="118"/>
+    </elements>
+</model>
